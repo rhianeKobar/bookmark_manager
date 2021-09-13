@@ -7,7 +7,7 @@ class Bookmark < Sinatra::Base
     end
   
     get '/' do
-      erb :index
+        "Bookmark"
     end
   
     run! if app_file == $0
