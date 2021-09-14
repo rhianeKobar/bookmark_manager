@@ -1,8 +1,39 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/lauramaddaluno/makers/bookmark_manager/spec/bookmarks_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/lauramaddaluno/makers/bookmark_manager/spec/features/bookmarks_spec.rb": {
+        "lines": [
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/lauramaddaluno/makers/bookmark_manager/spec/features/index_spec.rb": {
         "lines": [
+          null,
           null,
           null,
           1,
@@ -14,6 +45,6 @@
         ]
       }
     },
-    "timestamp": 1631551665
+    "timestamp": 1631632787
   }
 }

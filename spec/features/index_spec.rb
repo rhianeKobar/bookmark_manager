@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+
 feature 'Viewing Bookmarks' do
   scenario 'the index page shows content' do
     visit('/')

@@ -4,13 +4,20 @@ require 'sinatra/base'
 require 'sinatra/reloader'
 
 # Describe what the class is doing
+require './lib/bookmarks'
 class Bookmark < Sinatra::Base
   configure :development do
     register Sinatra::Reloader
   end
 
+
   get '/' do
     'Bookmark'
+  end
+
+  get '/bookmarks' do
+    @bookmarks = Bookmarks.all
+    erb :bookmarks
   end
 
   run! if app_file == $PROGRAM_NAME
