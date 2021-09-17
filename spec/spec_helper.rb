@@ -11,6 +11,7 @@ require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
 require 'simplecov-console'
+require 'pg'
 Capybara.app = Bookmark
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
@@ -36,6 +37,11 @@ SimpleCov.start
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
+	config.before(:each) do
+
+		conn = PG.connect('localhost','5432','','','bookmark_manager_test','postgres','postgres')
+		conn.exec "DELETE FROM bookmarks"
+	end
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
