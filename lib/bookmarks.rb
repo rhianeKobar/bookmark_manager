@@ -37,7 +37,7 @@ class Bookmarks
 				conn = PG.connect('localhost','5432','','','bookmark_manager','postgres','postgres')
 			end
 
-			conn.exec "INSERT INTO bookmarks(url,title)VALUES('#{link}','#{title}');"	
+			conn.exec_params("INSERT INTO bookmarks(url,title)VALUES($1,$2);",[link,title])	
 		
 		rescue PG::Error => e
 		
