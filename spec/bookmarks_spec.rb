@@ -17,4 +17,12 @@ describe Bookmarks do
       expect(bookmarks[0][:url]).to eq "http://www.youtube.com"
 		end
 	end
+	
+	describe ".delete" do
+		it "should empty the hash of bookmarks" do
+			bookmarks = add_bookmarks
+			bookmarks.clear
+			expect(bookmarks).to be_empty
+		end
+	end
 end

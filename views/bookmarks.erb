@@ -4,6 +4,11 @@
 			<a href="<%= bookmark[:url]%>">
 				<%= bookmark[:title]%>
 			</a>
+			<form method="POST" action="/bookmarks/<%= bookmark[:id]%>">
+				<input type="hidden" value="delete" name="_method">
+				<input type="submit" value="delete <%=bookmark[:title] %> bookmark">
+			</form>
 		</li>
+		
   <% end %>
 </ul>
