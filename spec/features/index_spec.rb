@@ -1,9 +1,11 @@
 # frozen_string_literal: true
 
 
-feature 'Viewing Bookmarks' do
-  scenario 'the index page shows content' do
+feature 'Bookmarks' do
+  scenario 'has an index page with a form to add bookmarks' do
     visit('/')
-    expect(page).to have_content('Bookmark')
+		fill_in('url', with: "http://www.youtube.com")
+		click_button('submit')
+		expect(page).to have_content("http://www.youtube.com")
   end
 end

@@ -26,5 +26,27 @@ class Bookmarks
 			conn.close if conn
 		
 		end
-  end 
+  end
+	
+	def self.create(link)
+		begin
+
+			if ENV['RACK_ENV'] == 'test' 
+				conn = PG.connect('localhost','5432','','','bookmark_manager_test','postgres','postgres')
+			else
+				conn = PG.connect('localhost','5432','','','bookmark_manager','postgres','postgres')
+			end
+
+			conn.exec "INSERT INTO bookmarks(url)VALUES('#{link}')"	
+		
+		rescue PG::Error => e
+		
+			puts e.message
+		
+		ensure
+
+			conn.close if conn
+		
+		end
+	end
 end

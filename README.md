@@ -21,6 +21,21 @@ User Story 1:
 
 [us_1]: ./resources/images/user_story_1.jpg "User Story 1"
 
+```
+As a user,
+In order to keep my bookmarks current
+I want to add bookmarks
+```
+
+> Nouns: bookmarks
+
+> Verbs: add bookmarks
+
+User Story 1:
+![Domain Model of User Story 2][us_2]
+
+[us_2]: ./resources/images/user_story_2.jpg "User Story 1"
+
 ---
 
 ## Database set-up
