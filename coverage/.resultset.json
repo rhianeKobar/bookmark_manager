@@ -4,11 +4,10 @@
       "/home/rhianekobar/Projects/bookmark_manager_2/spec/bookmarks_spec.rb": {
         "lines": [
           1,
-          null,
           1,
           null,
           1,
-          1,
+          null,
           1,
           1,
           1,
@@ -17,8 +16,6 @@
           1,
           null,
           null,
-          1,
-          1,
           1,
           1,
           1,
@@ -28,10 +25,23 @@
           null
         ]
       },
-      "/home/rhianekobar/Projects/bookmark_manager_2/spec/features/bookmarks_spec.rb": {
+      "/home/rhianekobar/Projects/bookmark_manager_2/spec/db_helper.rb": {
         "lines": [
+          1,
           null,
           1,
+          3,
+          3,
+          3,
+          3,
+          3,
+          null
+        ]
+      },
+      "/home/rhianekobar/Projects/bookmark_manager_2/spec/features/bookmarks_spec.rb": {
+        "lines": [
+          1,
+          null,
           1,
           1,
           1,
@@ -52,11 +62,12 @@
           1,
           1,
           1,
+          1,
           null,
           null
         ]
       }
     },
-    "timestamp": 1632051290
+    "timestamp": 1632072638
   }
 }

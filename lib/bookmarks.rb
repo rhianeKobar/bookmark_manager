@@ -14,7 +14,7 @@ class Bookmarks
 			end
 
 			rs = conn.exec "SELECT * FROM bookmarks"	
-			rs.map{|row| "#{row['url']}"}
+			rs.map{|row| {url: row['url'], title: row['title']}}
 		
 		rescue PG::Error => e
 		
@@ -28,7 +28,7 @@ class Bookmarks
 		end
   end
 	
-	def self.create(link)
+	def self.create(link, title)
 		begin
 
 			if ENV['RACK_ENV'] == 'test' 
@@ -37,7 +37,7 @@ class Bookmarks
 				conn = PG.connect('localhost','5432','','','bookmark_manager','postgres','postgres')
 			end
 
-			conn.exec "INSERT INTO bookmarks(url)VALUES('#{link}')"	
+			conn.exec "INSERT INTO bookmarks(url,title)VALUES('#{link}','#{title}');"	
 		
 		rescue PG::Error => e
 		
